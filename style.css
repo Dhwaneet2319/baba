@@ -1228,6 +1228,42 @@ img {
     text-decoration: underline;
 }
 
+/* Shiny credit link */
+.credit-link {
+    position: relative;
+    display: inline-block;
+    color: #999 !important;
+    text-decoration: none !important;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    background: linear-gradient(120deg,
+            #999 0%,
+            #999 40%,
+            #fff 50%,
+            #999 60%,
+            #999 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: credit-shine 3s ease-in-out infinite;
+    transition: opacity 0.3s ease;
+}
+
+.credit-link:hover {
+    opacity: 0.8;
+}
+
+@keyframes credit-shine {
+    0% {
+        background-position: 200% center;
+    }
+
+    100% {
+        background-position: -200% center;
+    }
+}
+
 /* Add some basic responsiveness */
 @media (max-width: 992px) {
     .hero-container {
