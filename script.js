@@ -143,3 +143,43 @@
         }
     });
 })();
+
+// ========================================
+// Gallery Filtering Logic
+// ========================================
+(function () {
+    const filterButtons = document.querySelectorAll('.gallery-filter');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    if (filterButtons.length === 0 || galleryItems.length === 0) return;
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to current
+            button.classList.add('active');
+
+            const filterValue = button.getAttribute('data-filter');
+
+            galleryItems.forEach(item => {
+                const category = item.getAttribute('data-category');
+                
+                if (filterValue === 'all' || filterValue === category) {
+                    item.classList.remove('hide');
+                    // Add a tiny delay for animation to trigger
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'scale(1)';
+                    }, 50);
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'scale(0.8)';
+                    setTimeout(() => {
+                        item.classList.add('hide');
+                    }, 300); // Wait for transition
+                }
+            });
+        });
+    });
+})();
