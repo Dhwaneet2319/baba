@@ -630,6 +630,101 @@ img {
     margin-top: 20px;
 }
 
+/* ABOUT INTRO SECTION */
+.about-intro {
+    padding: 100px 0 60px;
+    background-color: #ffffff;
+}
+
+.about-intro-header {
+    max-width: 800px;
+    margin: 0 auto 50px;
+}
+
+.about-intro-lead {
+    font-size: 17px;
+    color: var(--text-dark);
+    line-height: 1.9;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.about-intro-lead strong {
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+
+.about-intro-text {
+    font-size: 15px;
+    color: var(--text-medium);
+    line-height: 1.85;
+    margin-bottom: 0;
+}
+
+.about-values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.about-value-card {
+    background: var(--bg-light-blue);
+    border-radius: 14px;
+    padding: 35px 25px;
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+
+.about-value-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 35px rgba(14, 119, 194, 0.12);
+    border-color: rgba(14, 119, 194, 0.15);
+}
+
+.about-value-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--bg-blue-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+    color: white;
+    font-size: 22px;
+    box-shadow: 0 6px 18px rgba(14, 119, 194, 0.3);
+}
+
+.about-value-icon.green {
+    background: linear-gradient(135deg, #43e97b, #38f9d7);
+    box-shadow: 0 6px 18px rgba(67, 233, 123, 0.3);
+}
+
+.about-value-icon.orange {
+    background: linear-gradient(135deg, #f7971e, #ffd200);
+    box-shadow: 0 6px 18px rgba(247, 151, 30, 0.3);
+}
+
+.about-value-icon.purple {
+    background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+    box-shadow: 0 6px 18px rgba(161, 140, 209, 0.3);
+}
+
+.about-value-card h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.about-value-card p {
+    font-size: 13.5px;
+    color: var(--text-medium);
+    line-height: 1.6;
+    margin: 0;
+}
+
 /* WHY CHOOSE US SECTION */
 .why-choose-us {
     padding: 100px 0;
@@ -1675,6 +1770,24 @@ img {
 
     .quote-cta .section-title {
         font-size: 28px;
+    }
+
+    /* About Intro */
+    .about-intro {
+        padding: 60px 0 40px;
+    }
+
+    .about-values-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .about-intro-lead {
+        font-size: 15px;
+    }
+
+    .about-intro-text {
+        font-size: 14px;
     }
 
     /* Why Choose Us */
