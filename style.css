@@ -114,27 +114,30 @@ img {
     align-items: center;
 }
 
-/* Logo fake for BABA */
 .logo {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
 }
 
-.logo-text {
-    font-size: 42px;
-    font-weight: 800;
-    color: var(--primary-blue);
-    line-height: 1;
-    letter-spacing: -1px;
+.logo a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
 }
 
-.logo-subtext {
-    font-size: 10px;
-    text-transform: uppercase;
-    font-weight: 600;
-    color: var(--light-blue);
-    letter-spacing: 2px;
+.logo img {
+    max-height: 120px; /* Large, bold logo size */
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.02);
+}
+
+.white-logo img {
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
 }
 
 .nav-list {
